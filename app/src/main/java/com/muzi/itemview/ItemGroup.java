@@ -14,7 +14,7 @@ public class ItemGroup extends LinearLayout implements View.OnClickListener {
 
     private int currePosition = 2;
     private int nextPosition = -1;
-    private int margin = 2;
+    private int margin = 1;
 
     public ItemGroup(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -23,7 +23,7 @@ public class ItemGroup extends LinearLayout implements View.OnClickListener {
 
     private void init() {
         ItemView itemView0 = new ItemView(getContext(), R.drawable.img1, "潮品");
-        MarginLayoutParams params0 = new MarginLayoutParams(MarginLayoutParams.MATCH_PARENT, MarginLayoutParams.MATCH_PARENT);
+        LayoutParams params0 = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         params0.rightMargin = margin;
         itemView0.setLayoutParams(params0);
         itemView0.setId(R.id.view0);
@@ -31,8 +31,7 @@ public class ItemGroup extends LinearLayout implements View.OnClickListener {
         addView(itemView0);
 
         ItemView itemView1 = new ItemView(getContext(), R.drawable.img2, "搭配");
-        MarginLayoutParams params1 = new MarginLayoutParams(MarginLayoutParams.MATCH_PARENT, MarginLayoutParams.MATCH_PARENT);
-        params1.leftMargin = margin;
+        LayoutParams params1 = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         params1.rightMargin = margin;
         itemView1.setLayoutParams(params1);
         itemView1.setId(R.id.view1);
@@ -40,8 +39,7 @@ public class ItemGroup extends LinearLayout implements View.OnClickListener {
         addView(itemView1);
 
         ItemView itemView2 = new ItemView(getContext(), true, R.drawable.img3, "人气");
-        MarginLayoutParams params2 = new MarginLayoutParams(MarginLayoutParams.MATCH_PARENT, MarginLayoutParams.MATCH_PARENT);
-        params2.leftMargin = margin;
+        LayoutParams params2 = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         params2.rightMargin = margin;
         itemView2.setLayoutParams(params2);
         itemView2.setId(R.id.view2);
@@ -49,8 +47,7 @@ public class ItemGroup extends LinearLayout implements View.OnClickListener {
         addView(itemView2);
 
         ItemView itemView3 = new ItemView(getContext(), R.drawable.img4, "晒单");
-        MarginLayoutParams params3 = new MarginLayoutParams(MarginLayoutParams.MATCH_PARENT, MarginLayoutParams.MATCH_PARENT);
-        params3.leftMargin = margin;
+        LayoutParams params3 = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         params3.rightMargin = margin;
         itemView3.setLayoutParams(params3);
         itemView3.setId(R.id.view3);
@@ -58,9 +55,6 @@ public class ItemGroup extends LinearLayout implements View.OnClickListener {
         addView(itemView3);
 
         ItemView itemView4 = new ItemView(getContext(), R.drawable.img5, "BuyTV");
-        MarginLayoutParams params4 = new MarginLayoutParams(MarginLayoutParams.MATCH_PARENT, MarginLayoutParams.MATCH_PARENT);
-        params4.leftMargin = margin;
-        itemView4.setLayoutParams(params4);
         itemView4.setId(R.id.view4);
         itemView4.setOnClickListener(this);
         addView(itemView4);
